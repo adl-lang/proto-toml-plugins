@@ -1,0 +1,32 @@
+name = "pulumi"
+type = "cli"
+
+[resolve]
+git-url = "https://github.com/pulumi/pulumi"
+
+[platform.linux]
+archive-prefix = "pulumi"
+exe-path = "pulumi"
+download-file = "pulumi-v{version}-linux-{arch}.tar.gz"
+checksum-file = "pulumi-{version}-checksums.txt"
+
+[platform.macos]
+archive-prefix = "pulumi"
+exe-path = "pulumi"
+download-file = "pulumi-v{version}-darwin-{arch}.tar.gz"
+checksum-file = "pulumi-{version}-checksums.txt"
+
+[platform.windows]
+archive-prefix = "pulumi"
+exe-path = "pulumi.exe"
+download-file = "pulumi-v{version}-windows-{arch}.tar.gz"
+checksum-file = "pulumi-{version}-checksums.txt"
+
+[install]
+download-url = "https://github.com/pulumi/pulumi/releases/download/v{version}/{download_file}"
+checksum-url = "https://github.com/pulumi/pulumi/releases/download/v{version}/{checksum_file}"
+
+[install.arch]
+aarch64 = "arm64"
+x86 = "386"
+x86_64 = "amd64"

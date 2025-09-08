@@ -1,0 +1,26 @@
+name = "aws-vault"
+type = "cli"
+
+[resolve]
+git-url = "https://github.com/ByteNess/aws-vault"
+
+[platform.linux]
+download-file = "aws-vault-linux-{arch}"
+checksum-file = "aws-vault_sha256_checksums.txt"
+
+[platform.macos]
+download-file = "aws-vault-darwin-{arch}"
+checksum-file = "aws-vault_sha256_checksums.txt"
+
+[platform.windows]
+download-file = "aws-vault-windows-{arch}.exe"
+checksum-file = "aws-vault_sha256_checksums.txt"
+
+[install]
+download-url = "https://github.com/ByteNess/aws-vault/releases/download/v{version}/{download_file}"
+checksum-url = "https://github.com/ByteNess/aws-vault/releases/download/v{version}/{checksum_file}"
+
+[install.arch]
+aarch64 = "arm64"
+x86 = "386"
+x86_64 = "amd64"

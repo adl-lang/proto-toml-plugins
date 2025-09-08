@@ -1,0 +1,20 @@
+name = "adlc"
+type = "cli"
+
+[resolve]
+git-url = "https://github.com/adl-lang/adl"
+
+[platform.linux]
+download-file = "adl-bindist-{version}-linux-{arch}.zip"
+exe-path = "bin/adlc"
+
+[platform.macos]
+download-file = "adl-bindist-{version}-macos-{arch}.zip"
+exe-path = "bin/adlc"
+
+[install]
+download-url = "https://github.com/adl-lang/adl/releases/download/v{version}/{download_file}"
+
+[install.arch]
+x86_64 = "x64"
+aarch64 = "arm64"
