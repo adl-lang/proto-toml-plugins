@@ -19,7 +19,7 @@ checksum-file = "pulumi-{version}-checksums.txt"
 [platform.windows]
 archive-prefix = "pulumi"
 exe-path = "pulumi.exe"
-download-file = "pulumi-v{version}-windows-{arch}.tar.gz"
+download-file = "pulumi-v{version}-windows-{arch}.zip"
 checksum-file = "pulumi-{version}-checksums.txt"
 
 [install]
@@ -29,4 +29,4 @@ checksum-url = "https://github.com/pulumi/pulumi/releases/download/v{version}/{c
 [install.arch]
 aarch64 = "arm64"
 x86 = "386"
-x86_64 = "amd64"
+x86_64 = "x64"
